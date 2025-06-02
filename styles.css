@@ -165,7 +165,10 @@ header .navbar nav ul li a {
   text-align: center;
 }
 .steps .step h3 {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+  color: #ffffff;
+  font-family: "Aleo", serif;
+  font-weight: 200;
 }
 .steps .step i {
   font-size: 3rem;
