@@ -115,21 +115,24 @@ header .navbar nav ul li a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 4rem 2rem;
+  padding: 4rem 4rem;
   background: url("./images/palace_bg.png") no-repeat center center/cover;
 }
 .home .content {
   max-width: 50%;
+  height: auto;
 }
 .home .content h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
   color: #ffffff;
+  font-family: "Aleo", serif;
 }
 .home .content p {
   line-height: 1.6;
   margin-bottom: 1rem;
   color: #E8E8E8;
+  font-family: "Josefin Sans", sans-serif;
 }
 .home .content button {
   background-color: #5474FD;
@@ -138,6 +141,11 @@ header .navbar nav ul li a {
   padding: 0.75rem 1.5rem;
   cursor: pointer;
   font-weight: bold;
+}
+.home .images img {
+  width: 300px;
+  margin-bottom: 1rem;
+  display: block;
 }
 
 /*# sourceMappingURL=styles.css.map */
