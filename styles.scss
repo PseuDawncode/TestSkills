@@ -31,7 +31,11 @@ body, html {
     font-weight: bold;
     font-family: $primary-font;
     margin-bottom: -5px;
+
+      @media (max-width: 768px) {
+      font-size: 2.5rem;
   }
+}
 
   .subtitle {
     font-size: 1.5rem;
@@ -70,11 +74,18 @@ body, html {
       padding: 1rem 1.5rem;
       font-size: 1rem;
       cursor: pointer;
+      transition: all 0.3s ease;
       display: flex;
       align-items: center;
       gap: 0.5rem;
       border-top-right-radius: 4px;
       border-bottom-right-radius: 4px;
+
+     &:hover {
+      background: linear-gradient(135deg, #4338ca, #6d28d9);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(79, 70, 229, 0.4);
+    }
 
       .icon {
         font-size: 1rem;
@@ -126,49 +137,142 @@ header {
   }
 }
 
-.home {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+
+.why-choose-us {
   padding: 4rem 2rem;
   background: url('./images/palace_bg.png') no-repeat center center/cover;
+  color: $text-color;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
 
-  .content {
-    max-width: 50%;
-    h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      color: $text-color;
-      font-family: $secondary-font;
-      
-    }
-    p {
-      line-height: 1.6;
-      margin-bottom: 1rem;
-      color: #E8E8E8;
-      font-family: $primary-font;
-      
-    }
-    button {
-      font-family: $secondary-font;
-      background-color: $primary-color;
-      color: $text-color;
-      border: none;
-      padding: 0.75rem 1.5rem;
-      cursor: pointer;
-      font-weight: bold;
-      font-size: 0.8rem;
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      gap: 2rem;
     }
   }
+
+  
+  .content {
+    .description {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+      opacity: 0.9;
+    }
+
+    .cta-button {
+      background: #4285f4;
+      color: $text-color;
+      padding: 1rem 2rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border: none;
+      margin-top: 2rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: #3367d6;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(66, 133, 244, 0.3);
+      }
+    }
+  }
+
   .images {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 2rem;
+    padding: 1rem;
 
-    img {
-      width: 320px;
-      display: block;
-      object-fit: cover;
+    @media (max-width: 768px) {
+      order: -1; 
+      padding: 0;
+    }
+
+    .image-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 0;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+
+     
+      &:first-child,
+      &:last-child {
+        img {
+          height: 200px;
+        }
+      }
+
+   
+      &:hover img {
+        transform: scale(1.05);
+      }
+    }
+  }
+}
+
+.why-choose-us-flex {
+  padding: 4rem 2rem;
+  background: url('./images/palace_bg.png') no-repeat center center/cover;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+
+  .container-flex {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .content-flex {
+      flex: 1;
+    }
+
+    .images-flex {
+      flex: 0 0 400px;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+
+      @media (max-width: 768px) {
+        flex: none;
+        order: -1;
+        width: 100%;
+      }
+
     }
   }
 }
@@ -218,11 +322,15 @@ header {
         }
 
         &.villa {
-        background-image: url('./images/spain_bg.png'); 
+        background-image: url('./images/spain_bg.png');
+        justify-content: flex-start;
+        padding-left: 8%; 
         }
           
         &.coastal {
-          background-image: url('./images/madrid_bg.png'); 
+          background-image: url('./images/madrid_bg.png');
+          justify-content: flex-end;
+          padding-right: 8%; 
         }
       }
 
@@ -273,4 +381,30 @@ header {
     line-height: 1.6;
     margin-bottom: 35px;
     font-weight: 300;
+
+      &:last-of-type {
+      margin-bottom: 2.5rem;
+    }
   }
+
+  .book-btn {
+    background: $primary-color;
+    color: $text-color;
+    border: none;
+    padding: 16px 40px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(79, 70, 229, 0.3);
+    
+    &:hover {
+      background: linear-gradient(135deg, #4338ca, #6d28d9);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(79, 70, 229, 0.4);
+    }
+  }
+
