@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Aleo&family=Josefin+Sans&display=swap');
 
 $primary-color: #5474FD;
-$white: #ffffff;
+$text-color: #ffffff;
 $primary-font: 'Josefin Sans', sans-serif;
 $secondary-font: 'Aleo', serif;
 
@@ -21,7 +21,7 @@ body, html {
 
   .overlay {
     text-align: center;
-    color: $white;
+    color: $text-color;
     padding: 0 20px;
   }
 
@@ -64,7 +64,7 @@ body, html {
     button {
       font-family: $secondary-font;
       background-color: $primary-color;
-      color: $white;
+      color: $text-color;
       letter-spacing: 2px;
       border: none;
       padding: 1rem 1.5rem;
@@ -89,7 +89,7 @@ body, html {
     left: 50%;
     transform: translateX(-50%);
     font-size: 0.9rem;
-    color: $white;
+    color: $text-color;
     text-align: center;
 
     .arrow {
@@ -119,9 +119,36 @@ header {
       li a {
         font-family: $secondary-font;
         text-decoration: none;
-        color: #fff;
+        color: $text-color;
         font-size: 0.9rem;
       }
+    }
+  }
+}
+
+.home {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 2rem;
+  background: url('./images/palace_bg.png') no-repeat center center/cover;
+  .content {
+    max-width: 50%;
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    p {
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+    button {
+      background-color: $primary-color;
+      color: $text-color;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      cursor: pointer;
+      font-weight: bold;
     }
   }
 }
