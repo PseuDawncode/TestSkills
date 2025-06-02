@@ -244,3 +244,12 @@ header {
         box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
       }
 }
+
+  .location-tag {
+    color: $text-color;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    opacity: 0.8;
+  }
