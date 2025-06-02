@@ -1,15 +1,16 @@
 $primary-color: #5474FD;
 $white: #ffffff;
+$primary-font: 'Josefin Sans';
+$secondary-font: 'Aleo';
 
 body, html {
   margin: 0;
   padding: 0;
-  font-family: 'Helvetica Neue', sans-serif;
   height: 100%;
 }
 
 .hero {
-  background: url('./images/42d62715-b92a-4ac9-94b2-19c1f4199bad.png') no-repeat center center/cover;
+  background: url('./images/Header.png') no-repeat center center/cover;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -23,37 +24,46 @@ body, html {
   }
 
   .title {
-    font-size: 3rem;
+    font-size: 3.5rem;
     letter-spacing: 5px;
     font-weight: bold;
+    font-family: $primary-font;
+    margin-bottom: -5px;
   }
 
   .subtitle {
-    font-size: 1.2rem;
-    margin-top: 0.5rem;
+    font-size: 1.5rem;
     margin-bottom: 2rem;
-    letter-spacing: 2px;
+    letter-spacing: 5px;
+    font-family: $primary-font;
+    margin-top: 0.2rem;
   }
 
   .search-box {
     display: flex;
     justify-content: center;
     margin: 20px auto;
-    max-width: 600px;
+    width: 503px;
 
     input {
+      font-family: $primary-font;
       padding: 1rem;
       border: none;
       width: 70%;
-      font-size: 1rem;
+      font-size: 0.8rem;
+      color: #999999;
+      letter-spacing: 0.2rem;
       outline: none;
       border-top-left-radius: 4px;
       border-bottom-left-radius: 4px;
+      text-align: center;
     }
 
     button {
+      font-family: $secondary-font;
       background-color: $primary-color;
       color: $white;
+      letter-spacing: 2px;
       border: none;
       padding: 1rem 1.5rem;
       font-size: 1rem;
@@ -71,6 +81,7 @@ body, html {
   }
 
   .scroll-down {
+    font-family: $primary-font;
     position: absolute;
     bottom: 20px;
     left: 50%;
