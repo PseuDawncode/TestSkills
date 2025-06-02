@@ -156,9 +156,9 @@ header .navbar nav ul li a {
 
 .steps {
   display: flex;
-  justify-content: center;
-  background: #2f2f2f;
-  padding: 2rem 1rem;
+  justify-content: space-evenly;
+  background: #333333;
+  padding: 3rem 1rem;
 }
 .steps .step {
   margin: 0 2rem;
@@ -166,6 +166,9 @@ header .navbar nav ul li a {
 }
 .steps .step h3 {
   font-size: 1.2rem;
+}
+.steps .step i {
+  font-size: 3rem;
 }
 
 /*# sourceMappingURL=styles.css.map */

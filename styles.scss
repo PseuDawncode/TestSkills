@@ -175,15 +175,20 @@ header {
 
 .steps {
   display: flex;
-  justify-content: center;
-  background: #2f2f2f;
-  padding: 2rem 1rem;
+  justify-content: space-evenly;
+  background: #333333;
+  padding: 3rem 1rem;
+
   .step {
     margin: 0 2rem;
     text-align: center;
 
     h3 {
       font-size: 1.2rem;
+    }
+
+    i {
+      font-size: 3rem;
     }
   }
 }
