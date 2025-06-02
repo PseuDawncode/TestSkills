@@ -184,22 +184,36 @@ header .navbar nav ul li a {
   position: relative;
   overflow: hidden;
   border-radius: 0;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
 }
 .why-choose-us .images .image-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
 }
 .why-choose-us .images .image-card img {
-  width: 100%;
-  height: auto;
   display: block;
-  object-fit: cover;
+  object-fit: contain;
   transition: transform 0.3s ease;
+  min-height: 200px;
 }
-.why-choose-us .images .image-card:first-child img, .why-choose-us .images .image-card:last-child img {
-  height: 200px;
+.why-choose-us .images .image-card:first-child {
+  text-align: right;
+}
+.why-choose-us .images .image-card:first-child img {
+  width: 80%;
+  height: auto;
+  max-height: 250px;
+  margin-left: auto;
+  display: block;
+}
+.why-choose-us .images .image-card:last-child {
+  text-align: left;
+}
+.why-choose-us .images .image-card:last-child img {
+  width: 80%;
+  height: auto;
+  max-height: 250px;
+  margin-right: auto;
+  display: block;
 }
 .why-choose-us .images .image-card:hover img {
   transform: scale(1.05);
@@ -208,7 +222,7 @@ header .navbar nav ul li a {
 .why-choose-us-flex {
   padding: 4rem 2rem;
   background: url("./images/palace_bg.png") no-repeat center center/cover;
-  color: white;
+  color: #ffffff;
   min-height: 100vh;
   display: flex;
   align-items: center;

@@ -205,30 +205,43 @@ header {
       position: relative;
       overflow: hidden;
       border-radius: 0;
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
       transition: all 0.3s ease;
 
       &:hover {
         transform: translateY(-4px);
-        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
       }
 
       img {
-        width: 100%;
-        height: auto;
         display: block;
-        object-fit: cover;
+        object-fit: contain;
         transition: transform 0.3s ease;
+        min-height: 200px;
       }
 
      
-      &:first-child,
-      &:last-child {
+      &:first-child {
+        text-align: right; // Align first image to the right
+        
         img {
-          height: 200px;
+          width: 80%;
+          height: auto;
+          max-height: 250px;
+          margin-left: auto; // Push image to the right
+          display: block;
         }
       }
 
+       &:last-child {
+        text-align: left; // Align second image to the left
+        
+        img {
+          width: 80%;
+          height: auto;
+          max-height: 250px;
+          margin-right: auto; // Push image to the left
+          display: block;
+        }
+      }
    
       &:hover img {
         transform: scale(1.05);
@@ -240,7 +253,7 @@ header {
 .why-choose-us-flex {
   padding: 4rem 2rem;
   background: url('./images/palace_bg.png') no-repeat center center/cover;
-  color: white;
+  color: $text-color;
   min-height: 100vh;
   display: flex;
   align-items: center;
