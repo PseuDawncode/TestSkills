@@ -225,3 +225,22 @@ header {
           background-image: url('./images/madrid_bg.png'); 
         }
       }
+
+.content-card {
+    position: relative;
+    z-index: 2;
+    background: #232323;
+    opacity: 0.8;
+    border-radius: 8px;
+    padding: 40px;
+    max-width: 450px;
+    width: 90%;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    transform: translateY(0);
+    transition: transform 0.6s ease, box-shadow 0.6s ease;
+    
+      &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+      }
+}
