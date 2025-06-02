@@ -89,11 +89,17 @@ body, html {
   font-size: 0.9rem;
   color: #ffffff;
   text-align: center;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+.hero .scroll-down:hover {
+  opacity: 0.7;
 }
 .hero .scroll-down .arrow {
   display: block;
   font-size: 1.5rem;
   margin-top: 5px;
+  animation: bounce 2s infinite;
 }
 
 header {
