@@ -85,4 +85,30 @@ body, html {
   margin-top: 5px;
 }
 
+header {
+  background: #5474FD;
+}
+header .navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.5rem 2rem;
+}
+header .navbar .logo {
+  font-family: "Josefin Sans", sans-serif;
+  color: #fff;
+  letter-spacing: 2px;
+}
+header .navbar nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+header .navbar nav ul li a {
+  font-family: "Aleo", serif;
+  text-decoration: none;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
 /*# sourceMappingURL=styles.css.map */
